@@ -1,0 +1,44 @@
+{{#unless lista_vacia.length }}
+    <div class="card col-md-4 mt-4 m-2 mx-auto">
+      <div class="card-title bg-primary text-white">
+        <h6 class="m-2">Lista Vacia</h6>
+      </div>
+      <div class="div-body">
+        No hay elementos en la lista
+      </div>
+    </div>
+{{/unless}}
+{{#if lista.length }}
+  <div class="card col-md-4 mt-3 mx-auto">
+    <div class="card-title bg-primary text-white">
+      <h6 class="m-2">Lista 1</h6>
+    </div>
+    <div class="div-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Email</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each lista}}
+            <tr>
+              <td>{{ id }}</td>
+              <td>{{email}}</td>
+              <td>{{name}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{{else}}
+  <div class="card col-md-4 p-2 mt-3 mx-auto">
+    <div class="div-body">
+      No hay elementos en la lista
+    </div>
+  </div>  
+  
+{{/if}}
